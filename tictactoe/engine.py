@@ -15,7 +15,6 @@ class Engine:
     def minimax(self, board: Board, ai_turn: bool, depth: int, alpha: float, beta: float) -> tuple:
         available_moves = board.empty_squares
 
-        # If it's the start, randomly choose a move.
         if len(available_moves) == board.size ** 2:
             return 0, random.choice(list(range(board.size ** 2)))
 
@@ -31,7 +30,6 @@ class Engine:
                 eval_ = self.minimax(board, False, depth + 1, alpha, beta)[0]
                 board.undo(move)
 
-                # Here we flip the strategy. If the AI forces the foe into a losing position, it's beneficial.
                 if board.winner() == self.foe:
                     return board.size ** 2 - depth, move
 

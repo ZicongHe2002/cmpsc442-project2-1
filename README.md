@@ -35,7 +35,7 @@ The A.I. is designed to be unbeatable, meaning it will always either win or draw
 1. Clone this repo
 
 ```sh
-git clone git@github.com:IndieCoderMM/tictactoe-ai.git
+git clone https://github.com/ZicongHe2002/cmpsc442-project2-1.git
 ```
 
 2. Install pygame library
